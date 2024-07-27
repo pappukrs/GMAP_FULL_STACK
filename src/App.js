@@ -32,7 +32,7 @@ const App = () => {
     const [rotation, setRotation] = useState(0); 
 
     useEffect(() => {
-        const socket = io('http://localhost:3000');
+        const socket = io('https://gmap.up.railway.app');
 
         socket.on('vehicleLocation', (data) => {
             setVehicleData(prevData => [...prevData, data]);
